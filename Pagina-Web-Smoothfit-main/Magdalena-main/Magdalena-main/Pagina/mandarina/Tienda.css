@@ -1,0 +1,155 @@
+/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsla(237, 0%, 0%, 1);
+    background-image: radial-gradient(circle at 0% 99%, hsla(237, 0%, 0%, 1) 0%, transparent 67%), 
+                      radial-gradient(circle at 46% 94%, hsla(14, 0%, 0%, 1) 0%, transparent 81%), 
+                      radial-gradient(circle at 93% 95%, hsla(256, 100%, 23%, 1) 0%, transparent 66%), 
+                      radial-gradient(circle at 89% 8%, hsla(253, 100%, 9%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal, normal;
+    height: 100px;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    flex-grow: 1;
+    padding-bottom: 0px;
+    height: 80px;             
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 15px; 
+    background-color: hsla(0, 0%, 0%, 0); 
+    border-radius: 0px;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animación de barra blanca al pasar sobre el botón */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: rgb(255, 246, 246);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+}
+
+a.color {
+    background-color: violet;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.boton-iniciar-sesion {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #010b16; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.boton-tienda {
+    display: inline-block;
+    padding: 10px 30px; /* Espaciado del botón */
+    background-color: #010b16; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    margin-top: 20px; /* Margen superior */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones */
+}
+
+.boton-tienda:hover {
+    background-color: #021f32; /* Color de fondo al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+h2 {
+    font-family: 'Lobster', cursive; 
+    color: #ffffff; 
+    text-shadow: 2px 2px 0px #000000; 
+    margin: 20px 0;
+    text-align: center; 
+    font-size: 3em; 
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.image-gallery img {
+    width: 210px;
+    height: 250px;
+    margin: 10px; 
+    border: 2px solid white;
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); 
+}
+
+p {
+    font-family: 'Open Sans', sans-serif; 
+    color: #ffffff;
+    text-shadow: 1px 1px 0px #000000; 
+    text-align: center; 
+    margin: 10px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #010b16;
+    color: #ffffff;
+}

@@ -1,0 +1,101 @@
+/* Juegos.css */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsla(237, 0%, 0%, 1);
+    background-image: radial-gradient(circle at 0% 99%, hsla(237, 0%, 0%, 1) 0%, transparent 67%), 
+                      radial-gradient(circle at 46% 94%, hsla(14, 0%, 0%, 1) 0%, transparent 81%), 
+                      radial-gradient(circle at 93% 95%, hsla(256, 100%, 23%, 1) 0%, transparent 66%), 
+                      radial-gradient(circle at 89% 8%, hsla(253, 100%, 9%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal, normal;
+}
+
+/* Ajustes para el logo */
+.logo img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    flex-grow: 1;
+    padding-bottom: 0px;
+    height: 80px;             
+    margin-top: 20px;          
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 15px; 
+    background-color: hsla(0, 0%, 0%, 0); 
+    border-radius: 0px;
+    font-weight: bold;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+nav {
+    margin-top: 20px; 
+}
+
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: rgb(255, 246, 246);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+}
+
+a.color {
+    background-color: violet;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-iniciar-sesion {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #010b16; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+header {
+    height: 100px;
+}

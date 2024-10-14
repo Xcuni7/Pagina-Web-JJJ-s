@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmoothFit</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="PaginaWeb.css">
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="login_script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img title="SmoothFit" src="IMAGENES/LOGO.png" alt="Logo SmoothFit" width="120" height="95">
+        </div>
+        <nav>
+            <a href="Tienda.html">Tienda</a>
+            <a href="Aportes.html">¿Qué aporta?</a>
+            <a href="Juegos.html">Juegos</a>
+            <a href="Sobre_Nosotros.html">Sobre Nosotros</a>
+        </nav>
+        <div class="underline"></div>
+    </header>
+
+    <!-- Imagen de fondo -->
+    <div class="image-container">
+        <img id="imagen-modificable" src="Smothies.jpeg" alt="Imagen Modificable">
+    </div>
+
+    <h1 id="welcome-message">¡Bienvenido<span id="user-name"></span>!</h1>
+
+    <!-- Contenedor del botón -->
+    <div class="button-container" id="button-container">
+        <a href="#" class="boton-iniciar-sesion" id="login-button">Iniciar sesión</a>
+    </div>
+
+    <!-- Nuevo contenedor para el menú de productos -->
+    <div class="product-menu">
+        <h2>Productos</h2>
+        <div class="product-container">
+            <div class="product-item">
+                <img src="IMAGENES/product1.jpg" alt="Producto 1">
+                <p>Descripción del producto 1</p>
+            </div>
+            <div class="product-item">
+                <img src="IMAGENES/product2.jpg" alt="Producto 2">
+                <p>Descripción del producto 2</p>
+            </div>
+            <div class="product-item">
+                <img src="IMAGENES/product3.jpg" alt="Producto 3">
+                <p>Descripción del producto 3</p>
+            </div>
+        </div>
+        <div class="info-area">
+            <h3>Información del Producto</h3>
+            <p>Aquí puedes agregar más información o detalles sobre el producto seleccionado.</p>
+        </div>
+    </div>
+</body>
+</html>
