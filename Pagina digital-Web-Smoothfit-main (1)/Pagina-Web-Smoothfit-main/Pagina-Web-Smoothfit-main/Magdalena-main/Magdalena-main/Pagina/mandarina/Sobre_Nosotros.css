@@ -1,0 +1,61 @@
+/* Sobre Nosotros.css */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsla(237, 0%, 0%, 1);
+    background-image: radial-gradient(circle at 0% 99%, hsla(237, 0%, 0%, 1) 0%, transparent 67%), 
+                      radial-gradient(circle at 46% 94%, hsla(14, 0%, 0%, 1) 0%, transparent 81%), 
+                      radial-gradient(circle at 93% 95%, hsla(256, 100%, 23%, 1) 0%, transparent 66%), 
+                      radial-gradient(circle at 89% 8%, hsla(253, 100%, 9%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal, normal;
+}
+
+/* Ajustes para el logo */
+.logo img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+nav a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #feb47b; /* Color al pasar el ratón */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.boton-iniciar-sesion {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #010b16; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+header {
+    height: 100px;
+}
