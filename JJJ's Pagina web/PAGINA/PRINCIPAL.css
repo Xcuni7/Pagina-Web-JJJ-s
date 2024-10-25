@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e9e9e9; /* Fondo claro con textura */
+    color: #333;
+    background: url('https://www.transparenttextures.com/patterns/white-diamond.png'); /* Textura sutil */
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y botones */
+    align-items: center;
+    background: linear-gradient(135deg, #0d0d0d, #1f1f1f); /* Fondo degradado oscuro */
+    padding: 40px 50px; /* Aumentamos el padding para hacerlo más alto */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra más difusa */
+    border-bottom: 4px solid #f7c331; /* Borde mostaza más delgado */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 120px; /* Barra más alta */
+}
+
+/* Logo */
+.logo {
+    width: 190px;
+    height: auto;
+    transform: rotate(10deg); /* Logo girado a 10 grados */
+    position: relative;
+    left: 50px;
+    top: -100px; /* Ajuste vertical para subir el logo */
+    z-index: 1001; /* Asegura que esté por encima de la barra de navegación */
+}
+
+/* Contenedor de navegación para centrar los enlaces */
+.nav-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Enlaces de navegación */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espacio entre botones */
+    margin-right: 20px; /* Ajusta el margen derecho para mover más a la derecha */
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+/* Botones de navegación con borde amarillo */
+.nav-links li a {
+    color: #f7c331; /* Color del texto mostaza */
+    text-decoration: none;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    font-weight: 600;
+    padding: 8px 15px; /* Padding reducido para hacer los botones más pequeños */
+    border: 2px solid #f7c331; /* Borde amarillo */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #2e2e2e9f; /* Fondo gris claro */
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: none; /* Sin sombra inicial */
+    overflow: hidden; /* Evita que contenido adicional se salga del botón */
+}
+
+/* Efecto hover: Fondo amarillo suave y borde definido */
+.nav-links li a:hover {
+    background-color: #f7c331; /* El fondo se vuelve amarillo al hacer hover */
+    color: #1f1f1f; /* El texto se vuelve negro al hacer hover */
+    border-color: #f7c331; /* Borde amarillo permanece */
+    transform: scale(1.05); /* Efecto de agrandamiento ligero */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera al hacer hover */
+}
+
+/* Perfil de usuario */
+.profile-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-icon {
+    border-radius: 50%; /* Mantiene el círculo */
+    width: 45px;
+    height: 45px;
+    border: 2px solid #f7c331; /* Borde mostaza */
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.profile-icon:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+}
+
+/* Mejora para móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+}
