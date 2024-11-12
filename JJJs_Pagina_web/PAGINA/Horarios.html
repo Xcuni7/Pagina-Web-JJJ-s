@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Atención</title>
+    <link rel="stylesheet" href="Horarios.css">
+    <link rel="icon" href="Imagenes/Logo Restaurante.PNG">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <body>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <img src="Imagenes/Logo Restaurante.PNG" alt="Logo del Restaurante" width="53" height="50">
+                    <div class="logo_name">JJJ´s Food</div>
+                </div>
+                <i class='bx bx-menu' id='btn'></i>
+            </div>
+    
+            <div class="src">
+                <i class='bx bx-search-alt'></i>
+                <input type="text" placeholder="Buscar...">
+            </div>
+    
+            <ul class="nav">
+                <li>
+                    <a href="Principal.html">
+                         <i class='bx bx-store-alt'></i>
+                         <span class="link_name">Principal</span>
+                    </a>
+                    <span class="tooltip">Principal</span>
+                </li> 
+                <li>
+                    <a href="InicioSs.html">
+                        <i class='bx bx-extension'></i>
+                         <span class="link_name">Inicia sesión</span>
+                    </a>
+                    <span class="tooltip">Inicia sesión</span>
+                </li> 
+                <li>
+                    <a href="#">
+                        <i class='bx bx-basket'></i>
+                         <span class="link_name">Productos</span>
+                    </a>
+                    <span class="tooltip">Productos</span>
+                </li> 
+                <li>
+                    <a href="#">
+                        <i class='bx bx-package'></i>
+                         <span class="link_name">Pedidos</span>
+                    </a>
+                    <span class="tooltip">Pedidos</span>
+                </li> 
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dish'></i>
+                         <span class="link_name">Nosotros</span>
+                    </a>
+                    <span class="tooltip">Nosotros</span>
+                </li> 
+            </ul>
+        </div>
+        <script>
+            let btn = document.querySelector('#btn');
+            let sidebar = document.querySelector('.sidebar');
+            let srcBtn = document.querySelector('.bx-search');
+    
+            btn.onclick = function(){
+                sidebar.classList.toggle('active');
+            }
+            srcBtn.onclick = function(){
+                sidebar.classList.toggle('active');
+            }
+        </script>
+    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date();
+            var day = today.getDay();
+            var cards = document.querySelectorAll('.day-card');
+            cards.forEach(function(card, index) {
+                if (index === day) {
+                    card.classList.add('today');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="schedule-container">
+        <h2 class="schedule-header">Horarios de Atención</h2>
+        <div class="day-card">
+            <div class="day-name">Domingo</div>
+            <div class="day-hours">4:00 PM - 11:30 PM<i class="bx bxs-time-five"></i></div>
+        </div>
+        <div class="day-card">
+            <div class="day-name">Lunes</div>
+            <div class="day-hours"> 4:00 PM - 11:30 PM<i class="bx bxs-time-five"></i></div>
+        </div>
+        <div class="day-card">
+            <div class="day-name">Martes</div>
+            <div class="day-hours">4:00 PM - 11:30 PM<i class="bx bxs-time-five"></i></div>
+        </div>
+        <div class="day-card">
+            <div class="day-name">Miércoles</div>
+            <div class="day-hours">4:00 PM - 11:30 PM<i class="bx bxs-time-five"></i></div>
+        </div>
+        <div class="day-card">
+            <div class="day-name">Jueves</div>
+            <div class="day-hours">4:00 PM - 11:30 PM<i class="bx bxs-time-five"></i></div>
+        </div>
+        <div class="day-card">
+            <div class="day-name">Viernes</div>
+            <div class="day-hours">4:00 PM - 1:30 AM<i class="bx bxs-time-five"></i></div>
+        </div>
+        <div class="day-card">
+            <div class="day-name">Sábado</div>
+            <div class="day-hours">4:00 PM - 1:30 AM<i class="bx bxs-time-five"></i></div>
+        </div>
+    </div>
+</body>
+</html>
