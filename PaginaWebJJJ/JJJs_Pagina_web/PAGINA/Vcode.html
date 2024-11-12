@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación Código</title>
+    <link rel="icon" href="Imagenes/Logo Restaurante.PNG">
+    <link rel="stylesheet" href="VCode.css">
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <h4>Escribe el código</h4>
+        <p>Le hemos enviado el código de acceso por SMS para la verificación del número.</p>
+        <form id="verificationForm">
+            <div class="input-field">
+                <input type="number" id="digit1" maxlength="1" required />
+                <input type="number" id="digit2" maxlength="1" disabled />
+                <input type="number" id="digit3" maxlength="1" disabled />
+                <input type="number" id="digit4" maxlength="1" disabled />
+            </div>
+            <button type="submit" id="verifyButton">Verify</button>
+        </form>
+        <p>No recibí el código<br> <a href="#" id="resendCode">Reenviar código</a></p>
+    </div>
+    <script src="Vcode.js"></script>
+</body>
+</html>
