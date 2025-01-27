@@ -1,0 +1,164 @@
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222; /* Fondo negro suave */
+    color: #ccc; /* Texto gris claro */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Barra Superior */
+.topbar {
+    background-color: #000; /* Fondo negro profundo */
+    color: #ffd900; /* Texto amarillo dorado */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.topbar-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #111; /* Negro con tono gris */
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #ffd900; /* Borde amarillo dorado */
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff; /* Blanco para mejor contraste */
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    background-color: #fff;
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #ffc800;
+    box-shadow: 0 0 12px #ffd900;
+}
+
+/* About Section */
+.about-section {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffd900;
+}
+
+/* Etiquetas de formulario */
+.label-text, label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff; /* Cambia el texto a blanco */
+    display: block; /* Asegura que las etiquetas se posicionen correctamente */
+    text-transform: capitalize; /* Opcional: hace que cada palabra inicie en mayúscula */
+}
+
+.form-control {
+    background-color: #000;
+    border: 2px solid #ffd900;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+}
+
+.form-control:focus {
+    border: 2px solid #e0dccd;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+}
+
+/* Botones */
+button {
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#saveButton,
+#settingsButton,
+#changePhotoButton {
+    background-color: #ffd900;
+    color: #121212;
+    padding: 15px 25px;
+}
+
+button:hover {
+    background-color: #ffc700;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffd700;
+}
+
+/* Mensajes de error */
+#errorMessage {
+    color: #f00;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    .about-section {
+        padding: 20px;
+    }
+}
