@@ -16,8 +16,8 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Esto mantiene el contenido centrado a la izquierda */
-    flex-direction: column; /* Organiza los contenedores de arriba hacia abajo */
+    align-items: flex-start;
+    flex-direction: column;
     line-height: 1.5;
     
     background: url("Imagenes/PERROS BLACK 4.png") no-repeat center center fixed;
