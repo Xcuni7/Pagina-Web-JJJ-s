@@ -1,0 +1,294 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background: url("Imagenes/PERROS BLACK 4.png") center / cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.671); /* Fondo oscuro con un 50% de opacidad */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.wrapper:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #271930;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+/* Enlace de registro */
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.register a {
+    color: #ffdde1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Campo de entrada */
+.input-field {
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+/* Estilo de la etiqueta */
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* Campo de texto */
+.input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+/* Estilos cuando el campo está activo o tiene contenido */
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    font-size: 0.9rem;
+    top: 10px;
+    transform: translateY(-150%);
+    color: #ffdde1;
+}
+
+/* Sección de recordar y olvidar contraseña */
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #ffffff;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+#remember {
+    accent-color: #ffdde1;
+}
+
+.forget p {
+    margin-left: 8px;
+}
+
+/* Enlace de "Olvidó su contraseña" */
+.forget a {
+    color: #ffdde1;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none; /* Asegura que no haya subrayado */
+    transition: color 0.3s ease;
+}
+
+/* Agregar una línea que se anime desde la izquierda */
+.forget a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Posición de la línea justo debajo del texto */
+    width: 0;
+    height: 1px; /* Grosor de la línea */
+    background-color: #ffdde1; /* Color de la línea */
+    transition: width 0.3s ease; /* Suaviza la animación */
+}
+
+/* Efecto de animación al pasar el mouse */
+.forget a:hover::after {
+    width: 100%; /* La línea se expande al 100% al pasar el mouse */
+    background-color: #ffffff; /* Cambia el color de la línea al pasar el mouse */
+}
+
+/* Enlace de "Registrar" */
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.register a {
+    color: #ffdde1;
+    font-weight: 600; /* Aumenta el grosor de la fuente */
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+    text-decoration: none; /* Asegura que no haya subrayado */
+    transition: color 0.3s ease; /* Suaviza la transición del color */
+}
+
+/* Agregar una línea que se anime desde la izquierda */
+.register a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Posición de la línea justo debajo del texto */
+    width: 0;
+    height: 1px; /* Grosor de la línea */
+    background-color: #ffc8ce; /* Color de la línea */
+    transition: width 0.3s ease; /* Suaviza la animación */
+}
+
+/* Efecto de animación al pasar el mouse */
+.register a:hover::after {
+    width: 100%; /* La línea se expande al 100% al pasar el mouse */
+    background-color: #ffffff; /* Cambia el color de la línea al pasar el mouse */
+}
+
+/* Asegúrate de que no haya un subrayado predeterminado en la clase */
+.register a:hover {
+    text-decoration: none; /* Asegúrate de que no haya subrayado al pasar el mouse */
+}
+
+/* Estilo del botón de regresar */
+.back-button {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    width: 60px; /* Ajusta el tamaño del botón */
+    height: 60px; /* Ajusta el tamaño del botón */
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    overflow: hidden; /* Esconde cualquier parte de la imagen que sobresalga */
+    background-color: rgba(255, 255, 255, 0.527); /* Color de fondo del botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    display: flex; /* Permite usar flexbox para alinear la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    justify-content: flex-start; /* Alinea la imagen hacia la izquierda */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color al pasar el mouse */
+    padding-left: 5px; /* Espacio interno a la izquierda para dar margen a la imagen */
+}
+
+.back-button img {
+    width: 70%; /* Ajusta el tamaño de la imagen dentro del botón */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
+    margin-left: 5px; /* Mueve la imagen un poco a la izquierda */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Cambia el color de fondo al pasar el mouse */
+}
+
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons button {
+    width: 100%; /* Hace que los botones sean del mismo ancho que el botón "Entrar" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px 20px; /* Igual que el botón de "Entrar" */
+    transition: none; /* Desactiva la transición */
+}
+
+.google-button {
+    background-color: #ffffff; /* Fondo blanco para el botón de Google */
+    color: #000000; /* Texto negro para el botón de Google */
+    border: 1px solid #000000; /* Borde gris claro */
+}
+
+.google-button:hover {
+    color: #202020;
+    background-color: #ffffff; /* Cambio de color en hover para Google */
+}
+
+.facebook-button {
+    background-color: #0051ff; /* Fondo azul para el botón de Facebook */
+    color: #ffffff; /* Texto blanco para el botón de Facebook */
+    border: none; /* Sin borde para el botón de Facebook */
+    border: 1px solid #0051ff; /* Borde gris claro */
+}
+
+/* Eliminar cualquier cambio en hover */
+.facebook-button:hover {
+    background-color: #0051ff; /* Mantiene el mismo color de fondo al pasar el mouse */
+    color: #ffffff; /* Mantiene el mismo color de texto al pasar el mouse */
+}
+
+.social-icon {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+

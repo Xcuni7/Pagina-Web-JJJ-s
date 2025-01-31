@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    
+    background: url("Imagenes/PERROS BLACK 4.png") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    overflow-x: hidden;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    background: #000000;
+    padding: 6px 16px;
+    height: 100%;
+    box-shadow: 5px 0 30px rgba(0,0,0,.1);
+    transition: all .5s ease;
+}
+.sidebar.active {
+    width: 240px;
+}
+.sidebar .logo_content .logo {
+    display: flex;
+    color: #ffb700;
+    height: 50px;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 30px;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+}
+.sidebar .logo_content .logo .logo_name {
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+.sidebar #btn {
+    position: absolute;
+    color: #ffffff;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translate(-50%);
+}
+.sidebar.active #btn {
+    left: 85%;
+}
+.sidebar .src {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.sidebar .src input {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 50px);
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: #ffffff;
+    padding-left: 50px;
+    font-size: 15px;
+    color: #000000;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    transition: all .5s ease;
+}
+.sidebar .src .bx-search-alt {
+    position: absolute;
+    z-index: 99;
+    font-size: 22px;
+    color: #000000;
+    transition: all .5s ease;
+}
+.sidebar .src .bx-search-alt:hover {
+    background: rgb(255, 255, 255);
+}
+.sidebar .src .bx-search-alt:hover ~ input {
+    background: #ffffff;
+}
+.sidebar i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+.sidebar ul {
+    margin-top: 20px;
+}
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    line-height: 50px;
+}
+.sidebar ul li a {
+    color: #ffffff;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: all .5s ease;
+}
+.sidebar ul li a:hover {
+    color: #000000;
+    background: #ffc400;
+}
+.sidebar .link_name {
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .link_name {
+    opacity: 1;
+    font-weight: 550;
+    pointer-events: auto;
+}
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 140px;
+    top: 0;
+    transform: translate(-45%, -50%);
+    border-radius: 10px;
+    height: 35px;
+    width: 130px;
+    background: #ffffff;
+    line-height: 35px;
+    text-align: center;
+    font-size: 13px;
+    display: block;
+    color: #242424;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+    top: 50%;
+}
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 300px);
+    left: 80px;
+    transition: all .5s ease;
+}
+.home_content .text {
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+    padding: 12px 24px;
+}
+.sidebar.active ~ .home_content {
+    left: 300px;
+}
+.schedule-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffb700;
+}
+.schedule-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffb700;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.day-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    background-color: #ffb700;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.day-card:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ffffff;
+}
+.day-card.today {
+    background-color: #ffffff;
+    font-weight: 600;
+    color: #01579b;
+    border: 2px solid #ffb700;
+}
+.day-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+.day-hours {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.5px;
+}
+.closed {
+    color: #e57373;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+@media (max-width: 600px) {
+    .schedule-container {
+        padding: 16px;
+    }
+    .schedule-header {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .day-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+    .day-name {
+        font-size: 14px;
+    }
+    .day-hours {
+        font-size: 12px;
+    }
+}
+.day-hours {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.day-hours i {
+    font-size: 18px;
+    color: #000000;
+    margin-left: 8px;
+}
+.whatsapp-icon {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;  
+    background-color: #00a03b;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon a {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold
+}
+
+.whatsapp-icon i {
+    margin-right: 8px;
+    font-size: 35px;
+}
+
+.whatsapp-icon:hover {
+    background-color: #00af40;
+}

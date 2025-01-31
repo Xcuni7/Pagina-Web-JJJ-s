@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos JJJ´s</title>
+    <link rel="icon" href="Imagenes/Logo Restaurante.PNG">
+    <link rel="stylesheet" href="Producto.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar1">
+        <div class="logo_content1">
+            <div class="logo1">
+                <img src="Imagenes/Logo Restaurante.PNG" alt="Logo del Restaurante" width="53" height="50">
+                <div class="logo_name1">JJJ´s Food</div>
+            </div>
+            <i class='bx bx-menu' id='btn1'></i>
+        </div>
+
+        <div class="src1">
+            <i class='bx bx-search-alt'></i>
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <ul class="nav1">
+            <li>
+                <a href="Principal.html">
+                    <i class='bx bx-store-alt'></i>
+                     <span class="link_name1">Principal</span>
+                </a>
+                <span class="tooltip1">Principal</span>
+            </li> 
+            <li>
+                <a href="InicioSs.html">
+                    <i class='bx bxs-user-circle'></i>
+                     <span class="link_name1">Inicia sesión</span>
+                </a>
+                <span class="tooltip1">Inicia sesión</span>
+            </li> 
+            <li>
+                <a href="ProductosCigarreria.html">
+                    <i class='bx bxs-drink'></i>
+                     <span class="link_name1">Productos Beer</span>
+                </a>
+                <span class="tooltip1">Productos Beer</span>
+            </li> 
+            <li>
+                <a href="#">
+                    <i class='bx bx-package'></i>
+                     <span class="link_name1">Pedidos</span>
+                </a>
+                <span class="tooltip1">Pedidos</span>
+            </li> 
+            <li>
+                <a href="Nosotros.html">
+                    <i class='bx bx-conversation'></i>
+                     <span class="link_name1">Nosotros</span>
+                </a>
+                <span class="tooltip1">Nosotros</span>
+            </li> 
+            <li>
+                <a href="Horarios.html">
+                    <i class='bx bxs-calendar' ></i>
+                     <span class="link_name1">Horarios</span>
+                </a>
+                <span class="tooltip1">Horarios</span>
+            </li> 
+        </ul>
+    </div>
+    
+    <!-- Ícono flotante de WhatsApp con texto "Contáctanos" -->
+<div class="whatsapp-icon">
+    <a href="https://wa.me/573105813873?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20productos." target="_blank">
+        <i class='bx bxl-whatsapp'></i> Realiza tu pedido.
+    </a>
+</div>
+
+    <script>
+        let btn1 = document.querySelector('#btn1');
+        let sidebar1 = document.querySelector('.sidebar1');
+        let srcBtn1 = document.querySelector('.bx-search');
+
+        btn1.onclick = function(){
+            sidebar1.classList.toggle('active1');
+        }
+        srcBtn1.onclick = function(){
+            sidebar1.classList.toggle('active1');
+        }
+    </script>
+</body>
+<body>
+    <header class="nav-bar">
+        <div class="cart-icon" onclick="toggleCart()">
+            <img src="Imagenes/carrito-de-compras (2).png" alt="Carrito" width="30">
+            <span id="cart-count">0</span>
+        </div>
+        <h1>Productos JJJ´s Food</h1>
+    </header>
+
+    <main>
+        <div class="product-list">
+            <!-- Ejemplo de productos -->
+            <div class="product">
+                <img src="Comida/Mexico.webp" alt="Producto 1">
+                <h2>Mexicano</h2>
+                <p class="price">$20.000</p>
+                <button onclick="addToCart('Mexicano',20)">Agregar al Carrito</button>
+            </div>
+                        
+            <div class="product">
+                <img src="Comida/Burger Ranch.webp" alt="Producto 2">
+                <h2>Burger Ranch</h2>
+                <p class="price">$28.000</p>
+                <button onclick="addToCart('Burger Ranch', 28)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Amburgesa.png" alt="Producto 3">
+                <h2>Producto 3</h2>
+                <p class="price">$30.000</p>
+                <button onclick="addToCart('Producto 3', 30)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Hamburgesa 2.png" alt="Producto 5">
+                <h2>Producto 5</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 5', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Amburgesa.png" alt="Producto 6">
+                <h2>Producto 6</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 6', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Hamburgesa 2.png" alt="Producto 7">
+                <h2>Producto 7</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 7', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Amburgesa.png" alt="Producto 8">
+                <h2>Producto 8</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 8', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Hamburgesa 2.png" alt="Producto 9">
+                <h2>Producto 9</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 9', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 10">
+                <h2>Producto 10</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 10', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 11">
+                <h2>Producto 11</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 11', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 12">
+                <h2>Producto 12</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 12', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 13">
+                <h2>Producto 13</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 13', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 14">
+                <h2>Producto 14</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 14', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 15">
+                <h2>Producto 15</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 15', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 16">
+                <h2>Producto 16</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 16', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="Imagenes/Producto4.png" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$40.000</p>
+                <button onclick="addToCart('Producto 4', 40)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="cart-details" id="cart-details">
+        <h2>Tu Carrito</h2>
+        <ul id="cart-items"></ul>
+        <p class="total">Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="sendWhatsAppOrder()" class="buy-button">Comprar</button>
+    </div>
+    
+
+    <script src="Producto.js"></script>
+</body>
+</html>

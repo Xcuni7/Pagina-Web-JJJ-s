@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJJ´s FOOD</title>
+    <link rel="icon" href="Imagenes/Logo Restaurante.PNG">
+    <link rel="stylesheet" href="Nosotros.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar1">
+        <div class="logo_content1">
+            <div class="logo1">
+                <img src="Imagenes/Logo JJJs.png" alt="Logo Restaurante" width="150" height="50">
+                <div class="logo_name1"></div>
+            </div>
+            <i class='bx bx-menu' id='btn1'></i>
+        </div>
+
+        <div class="src1">
+            <i class='bx bx-search-alt'></i>
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <ul class="nav1">
+            <li>
+                <a href="Principal.html">
+                    <i class='bx bx-store-alt'></i>
+                     <span class="link_name1">Principal</span>
+                </a>
+                <span class="tooltip1">Principal</span>
+            </li> 
+            <li>
+                <a href="InicioSs.html">
+                    <i class='bx bxs-user-circle'></i>
+                     <span class="link_name1">Inicia sesión</span>
+                </a>
+                <span class="tooltip1">Inicia sesión</span>
+            </li> 
+            <li>
+                <a href="Producto.html">
+                    <i class='bx bxs-pizza' ></i>
+                     <span class="link_name1">Productos Food</span>
+                </a>
+                <span class="tooltip1">Productos Food</span>
+            </li> 
+            <li>
+                <a href="ProductosCigarreria.html">
+                    <i class='bx bxs-drink'></i>
+                     <span class="link_name1">Productos Beer</span>
+                </a>
+                <span class="tooltip1">Productos Beer</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-package'></i>
+                     <span class="link_name1">Pedidos</span>
+                </a>
+                <span class="tooltip1">Pedidos</span>
+            </li> 
+            <li>
+                <a href="Horarios.html">
+                    <i class='bx bxs-calendar'></i>
+                     <span class="link_name1">Horarios</span>
+                </a>
+                <span class="tooltip1">Horarios</span>
+            </li> 
+        </ul>
+    </div>
+
+    <script>
+        let btn1 = document.querySelector('#btn1');
+        let sidebar1 = document.querySelector('.sidebar1');
+        let srcBtn1 = document.querySelector('.bx-search');
+
+        btn1.onclick = function(){
+            sidebar1.classList.toggle('active1');
+        }
+        srcBtn1.onclick = function(){
+            sidebar1.classList.toggle('active1');
+        }
+    </script>
+
+<body>
+    <main>
+        <div class="icon">
+            <a href="https://www.instagram.com/los3jjjs?igsh=ZHJ2NnE2aGtldm10" target="_blank">
+                <svg height="80" width="80">
+                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                </svg>
+                <i class='bx bxl-instagram'></i>
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="https://www.facebook.com/profile.php?id=100063621660343&mibextid=ZbWKwL" target="_blank">
+                <svg height="80" width="80">
+                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                </svg>
+                <i class='bx bxl-facebook-circle'></i>
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="https://wa.me/573105813873" target="_blank">
+                <svg height="80" width="80">
+                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                </svg>
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="https://www.tiktok.com/@licores_losjjjs" target="_blank">
+                <svg height="80" width="80">
+                    <circle cx="40" cy="40" r="35" stroke="white" stroke-width="4" fill="none"></circle>
+                </svg>
+                <i class='bx bxl-tiktok'></i>
+            </a>
+        </div>
+    </main>   
+</body>
+</html>

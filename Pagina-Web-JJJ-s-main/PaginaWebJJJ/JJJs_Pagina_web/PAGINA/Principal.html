@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJJ´s FOOD</title>
+    <link rel="icon" href="Imagenes/Logo Restaurante.PNG">
+    <link rel="stylesheet" href="Principal.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<!-- Botón para abrir la carta -->
+<button class="carta-btn" onclick="toggleCarta()">Carta</button>
+    
+<!-- Contenedor de la imagen de la carta -->
+<div class="carta-container" id="carta" onclick="toggleZoom(event)">
+    <button class="toggle-img-btn btn-up" id="btnUp" onclick="toggleImagen(event)">⬆</button>
+    <img src="Imagenes/carta.jpg" alt="Carta del Restaurante" id="cartaImg">
+    <button class="toggle-img-btn btn-down" id="btnDown" onclick="toggleImagen(event)">⬇</button>
+</div>
+
+<script>
+    let isFirstImage = true;
+    let zoomActivo = false;
+
+    function toggleCarta() {
+        let carta = document.getElementById("carta");
+        let cartaImg = document.getElementById("cartaImg");
+        let btnUp = document.getElementById("btnUp");
+        let btnDown = document.getElementById("btnDown");
+
+        if (carta.style.display === "flex") {
+            carta.style.display = "none";
+            carta.classList.remove("zoom");
+            isFirstImage = true; // Resetear a la primera imagen al cerrar
+            cartaImg.src = "Imagenes/carta.jpg";
+            btnDown.style.display = "block";
+            btnUp.style.display = "none";
+            cartaImg.style.transform = "scale(1)";
+            zoomActivo = false;
+        } else {
+            carta.style.display = "flex";
+        }
+    }
+
+    function toggleZoom(event) {
+        let carta = document.getElementById("carta");
+        let cartaImg = document.getElementById("cartaImg");
+
+        if (event.target.tagName === "IMG") {
+            let rect = cartaImg.getBoundingClientRect();
+            let offsetX = (event.clientX - rect.left) / rect.width;
+            let offsetY = (event.clientY - rect.top) / rect.height;
+
+            if (!zoomActivo) {
+                carta.classList.add("zoom");
+                cartaImg.style.transformOrigin = `${offsetX * 100}% ${offsetY * 100}%`;
+                cartaImg.style.transform = "scale(2)";
+                zoomActivo = true;
+            } else {
+                carta.classList.remove("zoom");
+                cartaImg.style.transform = "scale(1)";
+                zoomActivo = false;
+            }
+        } else {
+            toggleCarta();
+        }
+    }
+
+    function toggleImagen(event) {
+        event.stopPropagation(); // Evita cerrar el modal al hacer clic en los botones
+        let cartaImg = document.getElementById("cartaImg");
+        let btnUp = document.getElementById("btnUp");
+        let btnDown = document.getElementById("btnDown");
+
+        if (isFirstImage) {
+            cartaImg.src = "Imagenes/carta2.jpg"; // Cambia a la segunda imagen
+            btnDown.style.display = "none";
+            btnUp.style.display = "block";
+        } else {
+            cartaImg.src = "Imagenes/carta.jpg"; // Vuelve a la primera imagen
+            btnDown.style.display = "block";
+            btnUp.style.display = "none";
+        }
+
+        isFirstImage = !isFirstImage;
+    }
+</script>
+
+
+    <div class="sidebar1">
+        <div class="logo_content1">
+            <div class="logo1">
+                <img src="Imagenes/Logo JJJs.png" alt="Logo Restaurante" width="150" height="50">
+                <div class="logo_name1"></div>
+            </div>
+            <i class='bx bx-menu' id='btn1'></i>
+        </div>
+
+        <div class="src1">
+            <i class='bx bx-search-alt'></i>
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <ul class="nav1">
+            <li>
+                <a href="InicioSs.html">
+                    <i class='bx bxs-user-circle'></i>
+                     <span class="link_name1">Inicia sesión</span>
+                </a>
+                <span class="tooltip1">Inicia sesión</span>
+            </li> 
+            <li>
+                <a href="Producto.html">
+                    <i class='bx bxs-pizza' ></i>
+                     <span class="link_name1">Productos Food</span>
+                </a>
+                <span class="tooltip1">Productos Food</span>
+            </li> 
+            <li>
+                <a href="ProductosCigarreria.html">
+                    <i class='bx bxs-drink'></i>
+                     <span class="link_name1">Productos Beer</span>
+                </a>
+                <span class="tooltip1">Productos Beer</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-package'></i>
+                     <span class="link_name1">Pedidos</span>
+                </a>
+                <span class="tooltip1">Pedidos</span>
+            </li> 
+            <li>
+                <a href="Nosotros.html">
+                    <i class='bx bx-conversation'></i>
+                     <span class="link_name1">Nosotros</span>
+                </a>
+                <span class="tooltip1">Nosotros</span>
+            </li> 
+            <li>
+                <a href="Horarios.html">
+                    <i class='bx bxs-calendar'></i>
+                     <span class="link_name1">Horarios</span>
+                </a>
+                <span class="tooltip1">Horarios</span>
+            </li> 
+        </ul>
+    </div>
+
+    <div class="home_content1">
+        <div class="text1"></div>
+    </div>
+
+<!-- Ícono flotante de WhatsApp con texto "Contáctanos" -->
+<div class="whatsapp-icon">
+    <a href="https://wa.me/573105813873?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20sus%20productos." target="_blank">
+        <i class='bx bxl-whatsapp'></i> Realiza tu pedido.
+    </a>
+</div>
+
+
+    <script>
+        let btn1 = document.querySelector('#btn1');
+        let sidebar1 = document.querySelector('.sidebar1');
+        let srcBtn1 = document.querySelector('.bx-search');
+
+        btn1.onclick = function(){
+            sidebar1.classList.toggle('active1');
+        }
+        srcBtn1.onclick = function(){
+            sidebar1.classList.toggle('active1');
+        }
+    </script>
+</body>
+</html>
